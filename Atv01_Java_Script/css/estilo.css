@@ -1,0 +1,26 @@
+body {
+    color: rgb(144, 102, 71);
+    background-color: rgb(255, 255, 219);
+    font-family: 'Rubik', sans-serif;
+}
+
+#iCampos {
+    margin-left: auto;
+    margin-right: auto;
+    width: 11cm;  
+}
+
+input {
+    border: 2px solid rgb(144, 102, 71); 
+}
+
+button {
+    background-color: rgb(144, 102, 71);
+    border: 3px solid rgb(144, 102, 71);
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+#resultado {
+    text-align: justify;
+}
