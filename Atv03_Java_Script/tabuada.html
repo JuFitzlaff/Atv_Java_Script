@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="tabuada, calcular, matematica, numeros">
+    <meta name="author" content="Julia da Silva Fitzlaff">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="img/matematica.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <title>Tabuada Avançada</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script language="JavaScript">
+        function tabuada() {
+            let num1 = parseInt(document.getElementById('inum1').value);
+            let num2 = parseInt(document.getElementById('inum2').value);
+            let resultado = "";
+
+            if ($("#estaSelecionado").is(':checked')) {
+                for (j = 1; j <= num2; j++) {
+                    resultado += "<br>";
+                    for (i = 0; i <= 10; i++) {
+                        resultado += j + " x " + i + " = " + (j * i);
+                        resultado += "<br>";
+                        
+                    }
+                }
+            } else {
+                for (j = num1; j <= num2; j++) {
+                    resultado += "<br>";
+                    for (i = 0; i <= 10; i++) {
+                        resultado += j + " x " + i + " = " + (j * i);
+                        resultado += "<br>";
+                    }
+                }
+            }
+            document.getElementById('dresultado').innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <div id="iCampos">
+        <h1>Tabuada</h1>
+        <br>
+        <label for="inum1">Número: </label>
+        <input type="number" id="inum1" value="2" step="1">
+        <label> até </label>
+        <input type="number" id="inum2" value="2" step="1">
+        <abbr title="Ao marcar a flag, informe até qual número deseja exibir a tabuada">
+            <input type="checkbox" id="estaSelecionado">
+        </abbr>
+        <div id="confirmacao" style="display:none"></div>
+        <br><br>
+        <button onclick="tabuada()">Exibir</button>
+        <br><br>
+        <div id="dresultado"></div>
+    </div>
+</body>
+</html>

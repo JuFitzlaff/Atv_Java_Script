@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="imc, calculadora, corpo, indice">
+    <meta name="author" content="Julia da Silva Fitzlaff">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="img/corpo-humano.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <title>Cálculo IMC</title>
+    <script language="Javascript">
+        function calcularIMC() {
+            let nome = document.getElementById("inome").value;
+            let altura = document.getElementById("ialtura").value;
+            let peso = document.getElementById("ipeso").value;
+            let imc = (peso / (altura * altura));
+
+            document.getElementById("resultado").innerHTML = "Nome: " + nome + "<br>Altura: " + altura + "<br>Peso: " + peso + "<br>Seu IMC é: " + imc.toLocaleString('pt-BR');
+            
+            if (imc < 18.50) {
+                document.getElementById("classificacao").innerText = "Abaixo do peso";
+                document.getElementById("classificacao").style.color = "#6495ED";
+            } else if (imc < 25) {
+                document.getElementById("classificacao").innerText = "Peso normal";
+                document.getElementById("classificacao").style.color = "#32CD32";
+            } else if (imc < 30) {
+                document.getElementById("classificacao").innerText = "Pré-obesidade";
+                document.getElementById("classificacao").style.color = "#FFDD00";
+            } else if (imc < 35) {
+                document.getElementById("classificacao").innerText = "Obesidade Grau 1";
+                document.getElementById("classificacao").style.color = "#FF8C00";
+            } else if (imc < 40) {
+                document.getElementById("classificacao").innerText = "Obesidade Grau 2";
+                document.getElementById("classificacao").style.color = "#FF6347"; 
+            } else {
+                document.getElementById("classificacao").innerText = "Obesidade Grau 3";
+                document.getElementById("classificacao").style.color = "#FF0000";
+            }
+        } 
+    </script>
+</head>
+<body>
+<div id="iCampos"><h1>Calculadora de IMC</h1>
+    <br>
+    <label for="inome">Nome: </label>
+    <input type="text" id="inome" value="">
+    <br><br>
+    <label for="ialtura">Altura: </label>
+    <input type="number" id="ialtura" value="">
+    <br><br>
+    <label for="ipeso">Peso: &nbsp;&nbsp;</label>
+    <input type="number" id="ipeso" value="">
+    <br><br>
+    <button onclick="calcularIMC()">Calcular IMC</button>
+    <br>
+    <p id="resultado"></p>
+    <p id="classificacao"></p>
+</div>
+</body>
+</html>

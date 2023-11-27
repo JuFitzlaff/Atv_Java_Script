@@ -1,0 +1,93 @@
+body {
+    background-color: #fff4d5;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'PT Serif', serif;
+    text-align: justify;
+}
+
+#link {
+    background-color: rgb(144, 195, 241);
+    color: white;
+    font-size: 17px;
+    border: 2px solid rgb(144, 195, 241);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+}
+ 
+#link:hover, #link :active {
+    background-color: rgb(38, 124, 199);
+    color: white;
+    font-size: 17px;
+    border: 2px solid rgb(38, 124, 199);
+    border-radius: 4px;
+}
+
+h1, h2 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 18px;
+}
+
+hr {
+    border-top: 2px solid white;
+}
+
+#img {
+    border: 5px solid #fff4d5;
+    max-width: 100%;
+    height: auto;
+}
+
+#historia {
+    background-color: rgb(154, 194, 154);
+    padding: 1cm;
+}
+
+#feedback{
+    background-color: rgb(154, 194, 154);
+    padding-bottom: 1cm;
+    padding-left: 1cm;
+    font-size: 18px;
+}
+
+#iMensagem {
+    border: rgb(154, 194, 154);
+    font-family: 'Acme', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'PT Serif', serif;
+    width: 42%;
+    box-sizing: border-box;
+}
+
+#iEmail {
+    border: rgb(154, 194, 154);
+    width: 30%;
+    box-sizing: border-box;
+}
+
+#button {
+    border:  rgb(144, 195, 241);
+    background-color:  rgb(144, 195, 241);
+    font-family: 'Acme', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'PT Serif', serif;
+    font-size: 17px;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+}
+
+#button:hover {
+    background-color: rgb(38, 124, 199);
+}
+
+#button:active {
+    transform: translateY(4px);
+}
